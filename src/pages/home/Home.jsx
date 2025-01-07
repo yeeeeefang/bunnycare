@@ -1,5 +1,13 @@
+import HomeCarousel from "../../components/other/HomeCarousel";
+import './Home.scss';
 function Home() {
-    return <h2>這是首頁</h2>;
+    return (
+    <>
+    <div className="home1">
+    <HomeCarousel/>
+    </div>
+    </>
+    );
   }
   
   export default Home;
