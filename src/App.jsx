@@ -1,33 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { BrowserRouter as Roter,Routes,Route, Router } from "react-router-dom";
+//components
+import Navbars from "./components/navbars/Navbars";
+
+//pages
+import Home from "./pages/home/Home";
+import About from "./pages/about/About";
+import Knowledge from "./pages/knowledge/Knowledge";
+import Medical from "./pages/medical/Medical";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {/* 在任何頁面都顯示Navbars */}
+      <Navbars/>
+
+      {/* 對應的路由 */}
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/knowledge" element={<Knowledge/>} />
+        <Route path="/medical" element={<Medical/>} />
+      </Routes>
     </>
   )
 }
