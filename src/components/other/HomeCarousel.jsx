@@ -71,7 +71,7 @@ export default function HomeCarousel() {
         <>
             {/* 最外層 */}
             <div className='titlehome'>
-                <img className='titlehomelogo' src="./images/bunnylogobig.svg" alt="" />
+                <img className='titlehomelogo' src="./images/bunnylogobignew.svg" alt="" />
             </div>
             <div className='wrapper'>
 

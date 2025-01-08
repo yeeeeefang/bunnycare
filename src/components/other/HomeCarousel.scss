@@ -5,7 +5,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
+    // margin-top: 10px;
+    padding-top: 20px;
 
     .titlehomelogo {
         width: 30%;
@@ -14,8 +15,8 @@
 
 .wrapper {
     display: flex;
-    flex-direction: column;  // 垂直排列
-    justify-content: flex-end; // 垂直底部對齊
+    flex-direction: column;  
+    justify-content: flex-end; 
     align-items: center;  
     position: relative;
     bottom: 0;
@@ -24,7 +25,7 @@
     // border: 1px solid black;
 
     .bakimg {
-        height: 700px;
+        height: 600px;
         margin:auto;
         background-size: contain;
         background-position: bottom;

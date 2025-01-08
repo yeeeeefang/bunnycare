@@ -19,4 +19,8 @@
 // $interval-s-xy-l: ;
 // $interval-x-center: 20px auto;
 
-$mediaLg: 'min-width: 1441px';
+//RWD斷點
+$mediaSm:'max-width:640px';//手機
+$mediaMd:' (max-width: 1023px) and (min-width: 768px)'; //平板橫
+$mediaSd:'(min-width:1024px) and (max-width:1439px)';//標準桌面1024-1440
+$mediaLg: 'min-width: 1441px';//大螢幕
