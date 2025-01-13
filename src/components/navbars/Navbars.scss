@@ -2,265 +2,58 @@
 @use '../../assets/scss/variables/' as *;
 
 .bunnynav {
-  background-image: url(../../assets/images/bunnycloud1.svg);
-  background-position: center;
-  background-size: 100% ;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 102px;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+  height: 140px;
   padding: 0 30px;
-  
+  gap: 300px; //logo中間空間
 
   .bunnylogobox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
 
     .bunnylogo {
-      width: 80px;
-      height: 70px;
-    }
-
-    .burger-menu {
-      display: none; // 預設隱藏
-      // flex-direction: column;
-      // gap: 5px;
-      // background: none;
-      // border: none;
-      // cursor: pointer;
-
+      width: 325px;
+      height: auto;
     }
   }
 
   .navul {
-    list-style: none;
     display: flex;
-    align-items: flex-end;
-    gap: 50px;
-    padding: 10px;
-  }
-
-  .bunnylink {
-    margin-right: 20px;
-    background-color: $btn-1;
-    width: 150px;
-    text-align: center;
-    border-radius: 99px;
-
-    a {
-      text-decoration: none;
-      font-weight: $font-medium;
-      font-size: $font-size-20;
-    }
-
-    &.active {
-      /* 針對當前頁面的按鈕做特殊樣式，比如： */
-      background-color: $btn-2;
-      // border-radius: 4px;
-
-      a {
-        font-weight: $font-bold;
-        color: $fc-2;
-        font-size: $font-size-24;
-      }
-    }
-  }
-}
-
-/* 大於1440px */
-@media ($mediaLg) {
-  .bunnynav {
-    width: 1920px;
-    height: 140px;
-    padding: 0 50px;
-
-    .bunnylogobox {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      .bunnylogo {
-        width: 100px;
-        height: 90px;
-      }
-    }
-
-    .navul {
-      gap: 60px;
-      padding: 25px;
-    }
+    justify-content: space-around;
+    padding: 0;
+    width: 50%;
 
     .bunnylink {
-      width: 150px;
-      height: 40px;
+      background-image: url('../../assets/images/navcloudlink.svg');
+      background-size: 130px 80px;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 130px;
+      height: 90px;
+      text-align: center;
+      line-height: 115px;
+      font-size: $font-size-24;
+      font-weight: $font-bold;
 
-      a {
-        line-height: 40px;
-        font-size: $font-size-20;
+      &:hover {
+        translate: 3px 3px;
+        a {
+          text-decoration: underline;
+        }
       }
 
       &.active {
+        background-image: url('../../assets/images/active-navcloudlink.svg');
+
         a {
-          font-size: $font-size-24;
+          color: #FFF;
         }
-      }
-    }
-  }
-}
-
-/* 標準桌面1024-1440 */
-@media ($mediaSd) {
-  .bunnynav {
-    max-width: 1439px;
-    height: 73px;
-    padding: 0 16px;
-
-    .bunnylogobox {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      .bunnylogo {
-        width: 70px;
-        height: 60px;
-      }
-    }
-
-    .navul {
-      gap: 30px;
-    }
-
-    .bunnylink {
-      width: 100px;
-      height: 30px;
-
-      a {
-        line-height: 30px;
-        font-size: $font-size-16;
-      }
-
-      &.active {
-        a {
-          font-size: $font-size-20;
-        }
-      }
-    }
-  }
-}
-
-/*平板橫 */
-@media ($mediaMd) {
-  .bunnynav {
-    background-size: 100% 73px;
-    max-width: 1023px;
-    height: 73px;
-    // padding: 0 16px;
-
-    .bunnylogobox {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      .bunnylogo {
-        width: 60px;
-        height: 50px;
-      }
-    }
-
-    .navul {
-      height: 60px;
-      gap: 0px;
-      padding: 0;
-    }
-
-    .bunnylink {
-      width: 100px;
-      height: 20px;
-
-      a {
-        line-height: 20px;
-        font-size: $font-size-14;
-      }
-
-      &.active {
-        a {
-          font-size: $font-size-16;
-        }
-      }
-    }
-  }
-}
-
-/* 新增：手機板樣式 */
-@media (max-width: 640px) {
-  .bunnynav {
-    .bunnylogobox {
-      display: flex;
-      justify-content: space-between;
-      width: 100vw;
-
-      .burger-menu {
-        display: flex; // 手機板顯示漢堡按鈕
-        flex-direction: column;
-        gap: 5px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        position: relative;
-        z-index: 1001;
-
-
-        .burger-bar {
-          width: 25px;
-          height: 3px;
-          background-color: #333;
-          border-radius: 2px;
-          transition: all 0.3s ease;
-        }
-
-        &.open .burger-bar:nth-child(1) {
-          transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        &.open .burger-bar:nth-child(2) {
-          opacity: 0; // 【新增】中間那條隱藏
-        }
-
-        &.open .burger-bar:nth-child(3) {
-          transform: rotate(-45deg) translate(6px, -6px);
-        }
-      }
-    }
-
-    .navul {
-      display: none; // 預設隱藏選單
-      position: absolute;
-      z-index: 999;
-      top: 70px;
-      right: 0;
-      width: 40%;
-      background-color: #fff;
-      flex-direction: column;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      border-radius: 20px;
-
-      /* 新增：開啟漢堡按鈕時顯示選單 */
-      &.open {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .bunnylink {
-        padding: 10px;
-        text-align: center;
-        border-bottom: 1px solid #e9afaf;
-
-        // &:last-child {
-        //   border-bottom: none;
-        // }
       }
     }
   }

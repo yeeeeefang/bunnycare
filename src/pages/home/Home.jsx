@@ -1,7 +1,7 @@
 import HomeCarousel from "../../components/homeother/HomeCarousel";
 import HomeTwo from "../../components/homeother/HomeTwo";
-// import './Home.scss';
-import '../css/Home.css';
+import './Home.scss';
+// import '../css/Home.css';
 function Home() {
     return (
     <>

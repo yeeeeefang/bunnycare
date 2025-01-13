@@ -2,9 +2,10 @@
 @use '../../assets/scss/variables/' as *;
 
 .home1 {
-    background-image: url(../../assets/images/homebg.svg);
-    background-position: bottom;
-    background-size: 80%;
-    background-repeat: no-repeat;
-    height: calc(100vh - 100px);
+    // background-image: url(../../assets/images/homebg.svg);
+    // background-position: bottom;
+    // background-size: 80%;
+    // background-repeat: no-repeat;
+    // height: calc(100vh - 100px);
+    height: 100vh;
 }

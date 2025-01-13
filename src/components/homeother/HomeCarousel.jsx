@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
-// import './HomeCarousel.scss';
-import '../css/HomeCarousel.css'
+import './HomeCarousel.scss';
+// import '../css/HomeCarousel.css'
 
 export default function HomeCarousel() {
     //建立目前背景圖的變數
@@ -10,9 +10,9 @@ export default function HomeCarousel() {
 
     //建立輪播圖片的陣列物件
     const slides = [
-        { url: "./images/homecarousel-1.svg", text1: '您的兔兔生活夥伴', text2: '從醫療急救到日常飲食，全面照顧兔兔的每一天。' },
-        { url: "./images/homecarousel-2.svg", text1: '探索兔兔的小宇宙', text2: '我們的知識專區是您照顧兔兔的堅強後盾。' },
-        { url: "./images/homecarousel-3.svg", text1: '新手也不怕安心指南', text2: '從入門到進階，一起成為兔兔的最佳夥伴！' },
+        { url: "./images/homecarouselnew-1.svg" },
+        { url: "./images/homecarouselnew-2.svg" },
+        { url: "./images/homecarouselnew-3.svg" },
     ]
 
     //setInterval方法=>多久時間可以執行裡面的事情
@@ -71,9 +71,9 @@ export default function HomeCarousel() {
     return (
         <>
             {/* 最外層 */}
-            <div className='titlehome'>
+            {/* <div className='titlehome'>
                 <img className='titlehomelogo' src="./images/bunnylogobignew.svg" alt="" />
-            </div>
+            </div> */}
             <div className='wrapper'>
 
                 {/* 滿版背景輪播區 */}
@@ -86,16 +86,6 @@ export default function HomeCarousel() {
                         //     margin: 'auto',
                     }}
                 >
-                    <div className='homebox'>
-                        <h2 className='hometexth2'>{slides[currentImgIndex].text1}</h2>
-                        <p className='hometextp'>{slides[currentImgIndex].text2}</p>
-                        <div className='homearrow'>
-                            {/* 上一張 */}
-                            <Arrow direction='left' onClick={prevSlide} className='arrowhome' />
-                            {/* 下一張 */}
-                            <Arrow direction='right' onClick={nextSlide} className='arrowhome' />
-                        </div>
-                    </div>
                 </div>
             </div>
         </>
