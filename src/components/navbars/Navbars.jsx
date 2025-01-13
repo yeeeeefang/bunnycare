@@ -1,5 +1,5 @@
 import React, { useState,useEffect} from "react";
-import './Navbars.scss';
+import './Navbars.css';
 import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [

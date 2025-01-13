@@ -9,6 +9,8 @@ import About from "./pages/about/About";
 import Knowledge from "./pages/knowledge/Knowledge";
 import Medical from "./pages/medical/Medical";
 
+import './assets/css/App.css';
+
 function App() {
   
   return (

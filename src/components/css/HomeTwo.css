@@ -165,58 +165,100 @@ a {
     background-color: $lesser-1;
 } */
 /* reset end */
-.titlehome {
+.hometwoall {
+  height: 100vh;
+}
+.hometwoall .strip {
+  height: 5%;
+}
+.hometwoall .characterbox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 90%;
+  gap: 20px;
+}
+.hometwoall .characterbox .char-card {
+  flex: 1;
+  border-radius: 250px 250px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  height: 90%;
+  background-color: #FFEEEE;
+  /* 偽元素圖片樣式 */
+}
+.hometwoall .characterbox .char-card .roleimg {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 20px;
-}
-.titlehome .titlehomelogo {
-  width: 30%;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
   position: relative;
-  bottom: 0;
-  width: 100vw;
-  height: 75vh;
 }
-.wrapper .bakimg {
-  height: 600px;
-  margin: auto;
-  background-size: contain;
-  background-position: bottom;
-  background-repeat: no-repeat;
+.hometwoall .characterbox .char-card .roleimg img {
+  width: 95%;
 }
-.wrapper .bakimg .hometext {
-  color: black;
-}
-.wrapper .homebox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 50px;
-}
-.wrapper .homebox .hometexth2 {
-  font-size: 2.5rem;
-}
-.wrapper .homebox .hometextp {
-  font-size: 1.8rem;
-}
-.wrapper .homebox .homearrow {
+.hometwoall .characterbox .char-card .roleimg::after {
+  content: "";
   position: absolute;
-  top: 50%;
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 200;
+  bottom: 0;
+  right: -50px;
+  width: 165px;
+  height: 70px;
 }
-.wrapper .homebox .homearrow .arrowhome {
-  cursor: pointer;
-  color: black;
-  direction: 10px;
-}/*# sourceMappingURL=HomeCarousel.css.map */
+.hometwoall .characterbox .char-card .roleimg-0::after {
+  background-image: url("../../assets/images/luminame.svg");
+}
+.hometwoall .characterbox .char-card .roleimg-1::after {
+  background-image: url("../../assets/images/miminame.svg");
+}
+.hometwoall .characterbox .char-card .roleimg-2::after {
+  background-image: url("../../assets/images/novaname.svg");
+}
+.hometwoall .characterbox .char-card .kidney {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.hometwoall .characterbox .char-card .kidney .kidn {
+  background-color: #FFF8D6;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.hometwoall .characterbox .char-card .hobby {
+  width: 78%;
+  padding-left: 10px;
+}
+.hometwoall .characterbox .char-card .hobby .cardh3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  position: relative;
+}
+.hometwoall .characterbox .char-card .hobby .cardh3::after {
+  content: "";
+  position: absolute;
+  background-image: url("../../assets/images/love.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 200;
+  bottom: 5px;
+  width: 20px;
+  height: 20px;
+}
+.hometwoall .characterbox .char-card .hobby .hobbytext {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.hometwoall .characterbox .char-card .hobby .inttext {
+  font-size: 1rem;
+  font-weight: 500;
+}/*# sourceMappingURL=HomeTwo.css.map */

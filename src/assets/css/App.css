@@ -180,7 +180,9 @@ small,
 label,
 input,
 button,
-a {
+a,
+link,
+span {
   font-family: "SweiGothicCJKtc-Regular", serif;
   color: #021D41;
 }/*# sourceMappingURL=App.css.map */

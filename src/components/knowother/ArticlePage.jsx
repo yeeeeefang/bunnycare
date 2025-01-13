@@ -1,5 +1,5 @@
 import React from "react";
-import './ArticlePage.scss';
+import './ArticlePage.css';
 import { VscDebugBreakpointFunction } from "react-icons/vsc";
 const ArticlePage = () => {
     // if (!article) {
