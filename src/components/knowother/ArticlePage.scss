@@ -1,0 +1,190 @@
+@use '../../assets/scss/reset';
+@use '../../assets/scss/variables/' as *;
+
+
+.articleall {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    gap: 40px;
+
+    /* 共用h2 */
+    h2 {
+        font-size: $font-size-40;
+        font-weight: $font-bold;
+    }
+    h5{
+        font-size: $font-size-24;
+        font-weight: $font-bold;
+    }
+
+    .arth3 {
+        font-size: $font-size-48;
+        font-weight: $font-bold;
+        padding-right: 550px;
+
+        span {
+            font-size: $font-size-64;
+            font-weight: $font-black;
+        }
+    }
+
+    .arth3-1 {
+        font-size: $font-size-48;
+        font-weight: $font-bold;
+    }
+
+    .artbox1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            font-size: $font-size-20;
+        }
+
+        img {
+            width: 450px;
+            height: 400px;
+        }
+    }
+
+    .artbox2 {
+        width: 80vw;
+        height: 300px;
+        text-align: center;
+
+
+
+        .artbox2-1 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 250px;
+
+            .popocontent {
+                h4 {
+                    font-size: $font-size-24;
+                    font-weight: $font-bold;
+                }
+
+                width: 350px;
+                height: 200px;
+                background-image: url('../../assets/images/articlepagebg1.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 310px 150px;
+                text-align: center;
+                padding-top: 60px;
+            }
+        }
+
+    }
+
+    .artbox3 {
+        width: 80vw;
+        height: 300px;
+        text-align: center;
+
+
+
+        .artbox3-1 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 250px;
+
+            .nopopocontent {
+                h4 {
+                    font-size: $font-size-24;
+                    font-weight: $font-bold;
+                }
+
+
+
+                width: 350px;
+                height: 400px;
+                background-image: url('../../assets/images/articlepagebg2.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 290px 380px;
+                text-align: center;
+                padding-top: 140px;
+            }
+        }
+
+    }
+
+    .artcontent {
+        display: flex;
+        flex-direction: column;
+       
+        gap: 70px;
+        .artprt1{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .artcontenth5 {
+                width: 250px;
+                height: 200px;
+                background-image: url('../../assets/images/articlepagebg3.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 200px 180px;
+                text-align: center;
+                padding-top: 80px;
+            }
+            .meaning1{
+                display: flex;
+                flex-direction: column;
+                gap: 35px;
+                .meaning2{
+                    display: flex;
+                    gap: 35px;
+                    h5{
+                        background-color: $btn-3;
+                        border-radius: 50px;
+                        width: 100px;
+                        height: 50px;
+                        line-height: 50px;
+                        text-align: center;
+                    }
+                    p{
+                        line-height: 50px;
+                        font-size: $font-size-24;
+                    }
+                }
+            }
+        }
+    }
+    .arttextbox{
+        display: flex;
+        width: 100%;
+        gap: 100px;
+        align-items: center;
+       justify-content: center;
+        .imgbox{
+            display: flex;
+            flex-direction: column;
+            img{
+                width: 250px;
+                height: 200px;
+            }
+            .imgtextbox{
+                text-align: center;
+            }
+        }
+    }
+    .arth4{
+        font-size: $font-size-24;
+        font-weight: $font-bold;
+        text-align: center;
+        letter-spacing: 8px;  /* 設定字母間距 */
+        line-height: 50px;
+    }
+}

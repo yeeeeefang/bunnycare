@@ -1,0 +1,116 @@
+@use '../../assets/scss/reset';
+@use '../../assets/scss/variables/' as *;
+
+.hometwoall {
+    height: 100vh;
+
+    .strip {
+        height: 5%;
+    }
+
+    .characterbox {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 90%;
+        gap: 20px;
+
+        .char-card {
+            flex: 1;
+            // border: 1px solid red;
+            border-radius: 250px 250px 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            height: 90%;
+            background-color: $bg-2;
+
+            .roleimg {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+
+                img {
+                    width: 95%;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    z-index: 200;
+                    bottom: 0;
+                    right:-50px;
+                    width: 165px;
+                    height: 70px;
+                }
+            }
+
+            /* 偽元素圖片樣式 */
+            .roleimg-0::after {
+                background-image: url('../../assets/images/luminame.svg');
+            }
+
+            .roleimg-1::after {
+                background-image: url('../../assets/images/miminame.svg');
+            }
+
+            .roleimg-2::after {
+                background-image: url('../../assets/images/novaname.svg');
+            }
+
+            .kidney {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+
+                .kidn {
+                    background-color: $bg-1;
+                    width: fit-content;
+                    padding: 10px;
+                    border-radius: 20px;
+                    font-size: $font-size-16 ;
+                    font-weight: $font-bold;
+                }
+            }
+            .hobby {
+                width: 78%;
+                padding-left: 10px;
+                .cardh3 {
+                    font-size: $font-size-20 ;
+                    font-weight: $font-bold;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        background-image: url('../../assets/images/love.png');
+                        background-position: center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        z-index: 200;
+                        bottom: 5px;
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
+                .hobbytext {
+                    font-size: $font-size-16 ;
+                    font-weight: $font-bold;
+                }
+                .inttext {
+                    font-size: $font-size-16 ;
+                    font-weight: $font-medium;
+                    // width: 70%;
+                }
+            }
+
+            
+        }
+    }
+}

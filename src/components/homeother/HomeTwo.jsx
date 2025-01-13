@@ -29,7 +29,7 @@ import './HomeTwo.scss';
             <div className="characterbox">
             {characters.map((role,index)=>(
                 <div className="char-card" key={index}>
-                    <div className="roleimg">
+                    <div className={`roleimg roleimg-${index}`}>
                         <img src={role.imgSrc} alt="" />
                     </div>
                     <div className="kidney">
@@ -41,9 +41,10 @@ import './HomeTwo.scss';
                     </div>
                     <div className="hobby">
                         <h3 className="cardh3">愛好</h3>
-                        <div className="hobbytext">{role.hobby}</div>
+                        <p className="hobbytext">{role.hobby}</p>
+                        <p className='inttext'>{role.introduce}</p>
                     </div>
-                    <p className='inttext'>{role.introduce}</p>
+                    
                 </div>
             ))}
         </div>

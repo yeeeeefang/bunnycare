@@ -2,15 +2,16 @@
 @use '../../assets/scss/variables/' as *;
 
 .bunnynav {
-  background-image: url(../../assets/images/bunnycloud.svg);
-  // background-position: center;
-  background-size: contain;
+  background-image: url(../../assets/images/bunnycloud1.svg);
+  background-position: center;
+  background-size: 100% ;
   background-repeat: no-repeat;
   width: 100vw;
   height: 102px;
   display: flex;
   justify-content: space-between;
   padding: 0 30px;
+  
 
   .bunnylogobox {
     display: flex;
@@ -209,29 +210,30 @@
         cursor: pointer;
         position: relative;
         z-index: 1001;
-     
 
-      .burger-bar {
-        width: 25px;
-        height: 3px;
-        background-color: #333;
-        border-radius: 2px;
-        transition: all 0.3s ease;
-      }
 
-      &.open .burger-bar:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-      }
+        .burger-bar {
+          width: 25px;
+          height: 3px;
+          background-color: #333;
+          border-radius: 2px;
+          transition: all 0.3s ease;
+        }
 
-      &.open .burger-bar:nth-child(2) {
-        opacity: 0; // 【新增】中間那條隱藏
-      }
+        &.open .burger-bar:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
 
-      &.open .burger-bar:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
+        &.open .burger-bar:nth-child(2) {
+          opacity: 0; // 【新增】中間那條隱藏
+        }
+
+        &.open .burger-bar:nth-child(3) {
+          transform: rotate(-45deg) translate(6px, -6px);
+        }
       }
     }
- }
+
     .navul {
       display: none; // 預設隱藏選單
       position: absolute;
@@ -263,22 +265,3 @@
     }
   }
 }
-
-//   // 手機版顯示
-//   @media (max-width: 640px) {
-//     .burger-menu {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 5px;
-//     background: none;
-//     border: none;
-//     cursor: pointer;
-//   }
-
-//   .burger-bar {
-//     width: 25px;
-//     height: 3px;
-//     background-color: #333;
-//     border-radius: 2px;
-//   }
-// }

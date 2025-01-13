@@ -1,5 +1,5 @@
-import HomeCarousel from "../../components/other/HomeCarousel";
-import HomeTwo from "../../components/other/HomeTwo";
+import HomeCarousel from "../../components/homeother/HomeCarousel";
+import HomeTwo from "../../components/homeother/HomeTwo";
 import './Home.scss';
 function Home() {
     return (
