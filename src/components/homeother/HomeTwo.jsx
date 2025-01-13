@@ -1,4 +1,5 @@
-import './HomeTwo.css';
+// import './HomeTwo.scss';
+import '../css/HomeTwo.css'
 
  const HomeTwo=()=>{
     const characters =[
