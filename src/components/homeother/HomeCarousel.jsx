@@ -10,9 +10,9 @@ export default function HomeCarousel() {
 
     //建立輪播圖片的陣列物件
     const slides = [
-        { url: "./images/homecarousel-1.svg", text1: '您的兔兔生活夥伴', text2: '從醫療急救到日常飲食，全面照顧兔兔的每一天。' },
-        { url: "./images/homecarousel-2.svg", text1: '探索兔兔的小宇宙', text2: '我們的知識專區是您照顧兔兔的堅強後盾。' },
-        { url: "./images/homecarousel-3.svg", text1: '新手也不怕安心指南', text2: '從入門到進階，一起成為兔兔的最佳夥伴！' },
+        { url: "/images/homecarousel-1.svg", text1: '您的兔兔生活夥伴', text2: '從醫療急救到日常飲食，全面照顧兔兔的每一天。' },
+        { url: "/images/homecarousel-2.svg", text1: '探索兔兔的小宇宙', text2: '我們的知識專區是您照顧兔兔的堅強後盾。' },
+        { url: "/images/homecarousel-3.svg", text1: '新手也不怕安心指南', text2: '從入門到進階，一起成為兔兔的最佳夥伴！' },
     ]
 
     //setInterval方法=>多久時間可以執行裡面的事情
