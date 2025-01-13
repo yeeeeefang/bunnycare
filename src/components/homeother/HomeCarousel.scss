@@ -1,23 +1,12 @@
 @use '../../assets/scss/reset';
 @use '../../assets/scss/variables/' as *;
 
-.titlehome {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    // margin-top: 10px;
-    padding-top: 20px;
-
-    .titlehomelogo {
-        width: 30%;
-    }
-}
 
 .wrapper {
     display: flex;
-    flex-direction: column;  
-    justify-content: flex-end; 
-    align-items: center;  
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     position: relative;
     bottom: 0;
     width: 100vw;
@@ -25,49 +14,34 @@
     // border: 1px solid black;
 
     .bakimg {
-        height: 700px;
-        width: 100%;
-        margin:auto;
+        height: calc(100vh - 140px);
+        width: 100vw;
+        margin: auto;
         background-size: contain;
         background-position: bottom;
         background-repeat: no-repeat;
-        border: 1px solid red;
-        
-
-        .hometext {
-            color: black;
-        }
+        // border: 1px solid red;
 
 
-    }
-
-    .homebox {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-top: 50px;
-        // gap: 100px;
-
-        .hometexth2 {
-            font-size: $font-size-40;
-        }
-
-        .hometextp {
-            font-size: $font-size-28;
-        }
-
-        .homearrow {
-            position: absolute;
-            top: 50%;
-            width: 100vw;
+        .homebox {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 50px;
 
-            .arrowhome {
-                cursor: pointer;
-                color: black;
-                direction: 10px;
+            .homearrow {
+                position: absolute;
+                top: 50%;
+                width: 100vw;
+                display: flex;
+                justify-content: space-between;
+                color: $bg-2;
+
+                .arrowhome {
+                    cursor: pointer;
+                    direction: 10px;
+                }
             }
         }
     }

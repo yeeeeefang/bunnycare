@@ -86,6 +86,14 @@ export default function HomeCarousel() {
                         //     margin: 'auto',
                     }}
                 >
+                    <div className='homebox'>
+                        <div className='homearrow'>
+                            {/* 上一張 */}
+                            <Arrow direction='left' onClick={prevSlide} className='arrowhome' />
+                            {/* 下一張 */}
+                            <Arrow direction='right' onClick={nextSlide} className='arrowhome' />
+                        </div>
+                    </div>
                 </div>
             </div>
         </>
