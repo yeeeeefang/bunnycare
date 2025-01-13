@@ -1,0 +1,160 @@
+@use '../assets/scss/reset';
+@use '../assets/scss/variables/' as *;
+
+.loginleftall {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: $primary-1;
+    position: relative;
+    background-image: url('../assets/images/bunnybg1.svg');
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+.loginlogo{
+    position: absolute;
+        width: 30%;
+        left: 80px;
+        top: 80px;
+}
+    .bunnyimg1 {
+        position: absolute;
+        width: 35%;
+        left: 80px;
+        bottom: 100px;
+    }
+
+    #login-page {
+        // display: flex;
+        //     flex-direction: column;
+        //     align-items: center;
+        //     justify-content: center;
+        width: 40%;
+        margin-left: 450px;
+
+        .login-main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 0;
+            background: $btn-1;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+
+            .login-form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h2 {
+                    text-align: center;
+                    margin-bottom: 20px;
+                    font-size: $font-size-28;
+                    font-weight: $font-bold;
+                }
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    width: 70%;
+
+                    label {
+                        margin-bottom: 5px;
+                        font-size: $font-size-20;
+                    }
+
+                    input {
+                        padding: 10px;
+                        margin-bottom: 15px;
+                        border: 1px solid $primary-1;
+                        border-radius: 5px;
+                        font-size: $font-size-16;
+
+                        &:focus {
+                            outline: none;
+                            border-color: $fc-2;
+                        }
+                    }
+
+                    .forgot-password {
+                        color: #007bff;
+                        cursor: pointer;
+                        font-size: $font-size-14;
+                        margin-bottom: 20px;
+                        text-align: right;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .login-button {
+                        padding: 10px;
+                        background-color: #6da7ff;
+                        color: #fff;
+                        border-radius: 5px;
+                        font-size: $font-size-16;
+                        font-weight: $font-bold;
+                        width: 100%;
+                        transition: background-color 0.3s;
+
+                        &:hover {
+                            background-color: #508fec;
+                        }
+                    }
+                }
+
+                .login-divider {
+                    display: flex;
+                    align-items: center;
+                    margin: 20px 0;
+
+                    hr {
+                        flex: 1;
+                        border: none;
+                        width: 150px;
+                        height: 1px;
+                        background: #b3acac;
+                    }
+
+                    span {
+                        margin: 0 10px;
+                        color: #999;
+                        font-size: $font-size-14;
+                    }
+                }
+
+                .social-login {
+                    display: flex;
+                    justify-content: center;
+
+                    button {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        margin: 0 5px;
+                        background-color: #f1f1f1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: background-color 0.3s;
+
+                        img {
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        &:hover {
+                            background-color: #e2e2e2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
