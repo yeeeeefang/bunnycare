@@ -1,3 +1,4 @@
+import React from "react";
 // import './HomeTwo.scss';
 import '../css/HomeTwo.css'
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './MedicalShow.scss';
-// import '../css/MedicalShow.css'
+// import './MedicalShow.scss';
+import '../css/MedicalShow.css'
 
 const MedicalShow = () => {
     const [currentView, setCurrentView] = useState("chart"); // 管理當前顯示的視圖

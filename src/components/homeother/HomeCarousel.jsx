@@ -1,8 +1,8 @@
 import React,{ useEffect, useState } from 'react';
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
-import './HomeCarousel.scss';
-// import '../css/HomeCarousel.css'
+// import './HomeCarousel.scss';
+import '../css/HomeCarousel.css'
 
 export default function HomeCarousel() {
     //建立目前背景圖的變數

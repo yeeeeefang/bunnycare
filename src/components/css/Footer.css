@@ -1,1 +1,252 @@
-/*# sourceMappingURL=Footer.css.map */
+@charset "UTF-8";
+/* reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 重置字體 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  line-height: 1.5;
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* 重置列表 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 重置圖片 */
+img {
+  display: block;
+  width: 100%;
+}
+
+/* 重置連結 */
+a {
+  display: block;
+  /* 將a預設inline改為block，才能設定間距及寬高*/
+  text-decoration: none;
+}
+
+/* 重製按鈕 */
+button {
+  border: none;
+  cursor: pointer;
+}
+
+/* 卷軸樣式 */
+/* ::-webkit-scrollbar {
+    //捲動條
+    width: 15px; //垂直卷軸寬
+    height: 15px; //水平卷軸高
+    // border-radius: 99px;
+
+}
+
+::-webkit-scrollbar-button {
+    background-color: $lesser-3;
+    width: 15px; //水平卷軸按鈕寬
+    height: 15px; //垂直捲職按鈕寬
+}
+
+// 卷軸按鈕(上下按鈕)
+
+::-webkit-scrollbar-thumb {
+    //卷軸手柄
+    background-color: $lesser-4;
+    width: 12px;
+    border-radius: 99;
+}
+
+::-webkit-scrollbar-track {
+    //滾動條軌道的顏色
+    background-color: $lesser-1;
+}
+
+::-webkit-scrollbar-corner {
+    //水平垂直卷軸的右下底角
+    background-color: $lesser-2;
+}
+::-webkit-resizer{//多行文字欄位右下縮放按鈕
+    background-color: $lesser-1;
+} */
+/* reset end */
+.footerall {
+  height: 200px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background-image: url("../../assets/images/footerimg.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.footerall .logofooter {
+  margin-left: 150px;
+  margin-top: 30px;
+  width: 300px;
+}
+.footerall .footerright {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 20px;
+}
+.footerall .footerright .social-login {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.footerall .footerright .social-login .facebook {
+  width: 24px;
+  height: 24px;
+  color: #1650cf;
+}
+.footerall .footerright .social-login .facebook svg {
+  width: 100%;
+}
+.footerall .footerright .social-login .apple {
+  width: 24px;
+  height: 24px;
+}
+.footerall .footerright .social-login .apple svg {
+  width: 100%;
+}
+.footerall .footerright .social-login .google {
+  width: 24px;
+  height: 24px;
+  color: #cf1616;
+}
+.footerall .footerright .social-login .google svg {
+  width: 100%;
+}
+
+/* 大於1440px */
+@media (min-width: 1441px) {
+  .footerall {
+    height: 270px;
+    width: 100vw;
+    background-image: url("../../assets/images/footerimg.svg");
+    background-size: 1920px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .footerall .logofooter {
+    margin-left: 220px;
+    margin-top: 30px;
+    width: 300px;
+  }
+  .footerall .footerright {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 50px;
+    margin-right: 90px;
+  }
+}/*# sourceMappingURL=Footer.css.map */

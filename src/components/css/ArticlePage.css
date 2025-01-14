@@ -80,7 +80,8 @@ summary,
 time,
 mark,
 audio,
-video {
+video,
+button {
   margin: 0;
   padding: 0;
   border: 0;
@@ -124,8 +125,13 @@ img {
 a {
   display: block;
   /* 將a預設inline改為block，才能設定間距及寬高*/
-  color: #000000;
   text-decoration: none;
+}
+
+/* 重製按鈕 */
+button {
+  border: none;
+  cursor: pointer;
 }
 
 /* 卷軸樣式 */
@@ -173,6 +179,7 @@ a {
   align-items: center;
   padding: 20px;
   gap: 40px;
+  position: relative;
   /* 共用h2 */
 }
 .articleall h2 {
@@ -263,12 +270,24 @@ a {
 .articleall .artcontent {
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  background-color: #FFEEEE;
+  padding: 30px;
+  border-radius: 5px;
+  position: relative;
+  gap: 20px;
+}
+.articleall .artcontent .role3 {
+  position: absolute;
+  width: 335px;
+  height: 245px;
+  right: -50px;
+  top: -60px;
 }
 .articleall .artcontent .artprt1 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin: 30px 0;
 }
 .articleall .artcontent .artprt1 .artcontenth5 {
   width: 250px;
@@ -323,6 +342,14 @@ a {
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
-  letter-spacing: 8px; /* 設定字母間距 */
+  letter-spacing: 8px;
+  /* 設定字母間距 */
   line-height: 50px;
+}
+.articleall .role4 {
+  position: absolute;
+  width: 205px;
+  height: 305px;
+  bottom: 50px;
+  left: 50px;
 }/*# sourceMappingURL=ArticlePage.css.map */

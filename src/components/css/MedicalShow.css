@@ -1,0 +1,519 @@
+@charset "UTF-8";
+/* reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 重置字體 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  line-height: 1.5;
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* 重置列表 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 重置圖片 */
+img {
+  display: block;
+  width: 100%;
+}
+
+/* 重置連結 */
+a {
+  display: block;
+  /* 將a預設inline改為block，才能設定間距及寬高*/
+  text-decoration: none;
+}
+
+/* 重製按鈕 */
+button {
+  border: none;
+  cursor: pointer;
+}
+
+/* 卷軸樣式 */
+/* ::-webkit-scrollbar {
+    //捲動條
+    width: 15px; //垂直卷軸寬
+    height: 15px; //水平卷軸高
+    // border-radius: 99px;
+
+}
+
+::-webkit-scrollbar-button {
+    background-color: $lesser-3;
+    width: 15px; //水平卷軸按鈕寬
+    height: 15px; //垂直捲職按鈕寬
+}
+
+// 卷軸按鈕(上下按鈕)
+
+::-webkit-scrollbar-thumb {
+    //卷軸手柄
+    background-color: $lesser-4;
+    width: 12px;
+    border-radius: 99;
+}
+
+::-webkit-scrollbar-track {
+    //滾動條軌道的顏色
+    background-color: $lesser-1;
+}
+
+::-webkit-scrollbar-corner {
+    //水平垂直卷軸的右下底角
+    background-color: $lesser-2;
+}
+::-webkit-resizer{//多行文字欄位右下縮放按鈕
+    background-color: $lesser-1;
+} */
+/* reset end */
+.medical-show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1050px;
+  height: 635px;
+  background-color: #FFDA75;
+  border-radius: 30px;
+  overflow: hidden;
+  /* 畫面內容 */
+}
+.medical-show .chart-view {
+  background-image: url("../../assets/images/medicalbg1.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.medical-show .chart-view .chart {
+  position: relative;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  overflow: hidden;
+}
+.medical-show .chart-view .chart svg {
+  translate: -1410px;
+  height: 255px;
+  margin-bottom: 20px;
+}
+.medical-show .chart-view .chart svg .d {
+  fill: #e73061;
+  transform-origin: 50% 50%; /* 使用百分比表示中心 */
+  /* 固定縮放的中心點 */
+  animation: heartbeat 1s ease-in-out infinite;
+}
+.medical-show .chart-view .chart svg .e {
+  fill: #6fbc93;
+  animation: line-move 2s linear infinite;
+}
+.medical-show .chart-view .chart p {
+  color: #FFFFFF;
+}
+.medical-show .chart-view,
+.medical-show .list-view {
+  width: 925px;
+  height: 455px;
+  border-radius: 15px;
+  background-color: #4D4D4D;
+}
+.medical-show .chart-view .hospital-list,
+.medical-show .list-view .hospital-list {
+  width: 98%;
+  max-height: 450px;
+  overflow-y: scroll;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.medical-show .chart-view .hospital-list::-webkit-scrollbar,
+.medical-show .list-view .hospital-list::-webkit-scrollbar {
+  width: 10px;
+}
+.medical-show .chart-view .hospital-list::-webkit-scrollbar-thumb,
+.medical-show .list-view .hospital-list::-webkit-scrollbar-thumb {
+  background-color: #F4BA37;
+  width: 12px;
+  border-radius: 99px;
+}
+.medical-show .chart-view .hospital-list::-webkit-scrollbar-track,
+.medical-show .list-view .hospital-list::-webkit-scrollbar-track {
+  background-color: #FFF8D6;
+  border-radius: 99px;
+}
+.medical-show .chart-view .hospital-list li,
+.medical-show .list-view .hospital-list li {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+.medical-show .chart-view .hospital-list li .box,
+.medical-show .list-view .hospital-list li .box {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 30px;
+}
+.medical-show .chart-view .hospital-list li .box .iconnamebox,
+.medical-show .list-view .hospital-list li .box .iconnamebox {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.medical-show .chart-view .hospital-list li .box .iconnamebox img,
+.medical-show .list-view .hospital-list li .box .iconnamebox img {
+  width: 40px;
+  height: 44px;
+  margin-right: 20px;
+}
+.medical-show .chart-view .hospital-list li .box .iconnamebox .hospital-name,
+.medical-show .list-view .hospital-list li .box .iconnamebox .hospital-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #FFF;
+  margin-right: 50px;
+}
+.medical-show .chart-view .hospital-list li .box .info-box,
+.medical-show .list-view .hospital-list li .box .info-box {
+  display: flex;
+  gap: 10px;
+  width: 236px;
+}
+.medical-show .chart-view .hospital-list li .box .info-box .pink-box,
+.medical-show .list-view .hospital-list li .box .info-box .pink-box {
+  background-color: #FFEEEE;
+  padding: 8px 12px;
+  border-radius: 30px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #021D41;
+  margin-right: 25px;
+}
+.medical-show .chart-view .hospital-list li .box .info-box .yellow-box,
+.medical-show .list-view .hospital-list li .box .info-box .yellow-box {
+  background-color: #FFDA75;
+  padding: 4px 20px;
+  border-radius: 30px;
+  font-size: 1.25rem;
+  color: #E73061;
+  font-weight: 700;
+}
+.medical-show .buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+.medical-show .buttons .region-button {
+  background-color: #FFEEEE;
+  padding: 10px 50px;
+  border-radius: 35px;
+  transition: background-color 0.3s;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.medical-show .buttons .region-button:hover {
+  translate: 2px 2px;
+}
+.medical-show .buttons .region-button.active {
+  background-color: #FFCCCC;
+}
+.medical-show .buttons .red-button {
+  width: 94px;
+  height: 94px;
+  cursor: pointer;
+  margin-left: 70px;
+}
+.medical-show .buttons .red-button:hover {
+  scale: 1.02;
+}
+
+@keyframes line-move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(200px);
+  }
+}
+@keyframes heartbeat {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+    /* 回到原始位置和大小 */
+  }
+  50% {
+    transform: translate(-30px, 0px) scale(1.05);
+    /* 向上移動並縮放 */
+  }
+}
+/* 大於1440px */
+@media (min-width: 1441px) {
+  .medical-show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1450px;
+    height: 835px;
+    background-color: #FFDA75;
+    border-radius: 30px;
+    overflow: hidden;
+    /* 畫面內容 */
+  }
+  .medical-show .chart-view {
+    background-image: url("../../assets/images/medicalbg1.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .medical-show .chart-view .chart {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    overflow: hidden;
+  }
+  .medical-show .chart-view .chart svg {
+    translate: -1410px;
+    height: 255px;
+    margin-bottom: 20px;
+  }
+  .medical-show .chart-view .chart svg .d {
+    fill: #e73061;
+    transform-origin: 50% 50%; /* 使用百分比表示中心 */
+    /* 固定縮放的中心點 */
+    animation: heartbeat 1s ease-in-out infinite;
+  }
+  .medical-show .chart-view .chart svg .e {
+    fill: #6fbc93;
+    animation: line-move 2s linear infinite;
+  }
+  .medical-show .chart-view .chart p {
+    color: #FFFFFF;
+  }
+  .medical-show .chart-view,
+  .medical-show .list-view {
+    width: 1125px;
+    height: 605px;
+    border-radius: 15px;
+    background-color: #4D4D4D;
+  }
+  .medical-show .chart-view .hospital-list,
+  .medical-show .list-view .hospital-list {
+    width: 98%;
+    max-height: 580px;
+    overflow-y: scroll;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .medical-show .chart-view .hospital-list::-webkit-scrollbar,
+  .medical-show .list-view .hospital-list::-webkit-scrollbar {
+    width: 10px;
+  }
+  .medical-show .chart-view .hospital-list::-webkit-scrollbar-thumb,
+  .medical-show .list-view .hospital-list::-webkit-scrollbar-thumb {
+    background-color: #F4BA37;
+    width: 12px;
+    border-radius: 99px;
+  }
+  .medical-show .chart-view .hospital-list::-webkit-scrollbar-track,
+  .medical-show .list-view .hospital-list::-webkit-scrollbar-track {
+    background-color: #FFF8D6;
+    border-radius: 99px;
+  }
+  .medical-show .chart-view .hospital-list li,
+  .medical-show .list-view .hospital-list li {
+    padding: 18px;
+    border-bottom: 1px solid #eee;
+  }
+  .medical-show .chart-view .hospital-list li .box,
+  .medical-show .list-view .hospital-list li .box {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 30px;
+  }
+  .medical-show .chart-view .hospital-list li .box .iconnamebox,
+  .medical-show .list-view .hospital-list li .box .iconnamebox {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .medical-show .chart-view .hospital-list li .box .iconnamebox img,
+  .medical-show .list-view .hospital-list li .box .iconnamebox img {
+    width: 40px;
+    height: 44px;
+    margin-right: 20px;
+  }
+  .medical-show .chart-view .hospital-list li .box .iconnamebox .hospital-name,
+  .medical-show .list-view .hospital-list li .box .iconnamebox .hospital-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #FFF;
+    margin-right: 50px;
+  }
+  .medical-show .chart-view .hospital-list li .box .info-box,
+  .medical-show .list-view .hospital-list li .box .info-box {
+    display: flex;
+    gap: 10px;
+    width: 236px;
+  }
+  .medical-show .chart-view .hospital-list li .box .info-box .pink-box,
+  .medical-show .list-view .hospital-list li .box .info-box .pink-box {
+    background-color: #FFEEEE;
+    padding: 8px 12px;
+    border-radius: 30px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #021D41;
+    margin-right: 25px;
+  }
+  .medical-show .chart-view .hospital-list li .box .info-box .yellow-box,
+  .medical-show .list-view .hospital-list li .box .info-box .yellow-box {
+    background-color: #FFDA75;
+    padding: 4px 20px;
+    border-radius: 30px;
+    font-size: 1.25rem;
+    color: #E73061;
+    font-weight: 700;
+  }
+  .medical-show .buttons {
+    display: flex;
+    gap: 35px;
+    margin-top: 20px;
+  }
+  .medical-show .buttons .region-button {
+    background-color: #FFEEEE;
+    padding: 10px 50px;
+    border-radius: 35px;
+    transition: background-color 0.3s;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  .medical-show .buttons .region-button:hover {
+    translate: 2px 2px;
+  }
+  .medical-show .buttons .region-button.active {
+    background-color: #FFCCCC;
+  }
+  .medical-show .buttons .red-button {
+    width: 94px;
+    height: 94px;
+    cursor: pointer;
+    margin-left: 70px;
+  }
+  .medical-show .buttons .red-button:hover {
+    scale: 1.02;
+  }
+}/*# sourceMappingURL=MedicalShow.css.map */

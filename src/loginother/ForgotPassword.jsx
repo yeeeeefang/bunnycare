@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import { Link } from 'react-router-dom';
-import './ForgotPassword.scss';
+// import './ForgotPassword.scss';
+import '../css/ForgotPassword.css'
 
 const ForgotPassword = ({ isOpen, onClose }) => {
   const forgotRef = useRef(null);

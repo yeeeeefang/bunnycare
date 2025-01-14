@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import ArticlePage from './ArticlePage'; // 引入單一文章頁元件
-import './SearchBox.scss';
-// import '../css/SearchBox.css'
+// import './SearchBox.scss';
+import '../css/SearchBox.css'
 import { FaSearch } from 'react-icons/fa';
 import TopButton from './TopButton';
 

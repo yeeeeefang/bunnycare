@@ -80,7 +80,8 @@ summary,
 time,
 mark,
 audio,
-video {
+video,
+button {
   margin: 0;
   padding: 0;
   border: 0;
@@ -124,8 +125,13 @@ img {
 a {
   display: block;
   /* 將a預設inline改為block，才能設定間距及寬高*/
-  color: #000000;
   text-decoration: none;
+}
+
+/* 重製按鈕 */
+button {
+  border: none;
+  cursor: pointer;
 }
 
 /* 卷軸樣式 */
@@ -164,11 +170,4 @@ a {
 ::-webkit-resizer{//多行文字欄位右下縮放按鈕
     background-color: $lesser-1;
 } */
-/* reset end */
-.home1 {
-  background-image: url(../../assets/images/homebg.svg);
-  background-position: bottom;
-  background-size: 80%;
-  background-repeat: no-repeat;
-  height: calc(100vh - 100px);
-}/*# sourceMappingURL=Home.css.map */
+/* reset end *//*# sourceMappingURL=Home.css.map */

@@ -1,8 +1,8 @@
 import Footer from '../../components/footer/Footer';
 import MedicalShow from '../../components/medicalother/MedicalShow';
 import Navbars from '../../components/navbars/Navbars'
-import './Medical.scss';
-// import '../css/Medical.css'
+// import './Medical.scss';
+import '../css/Medical.css'
 function Medical() {
   return (
     <>

@@ -80,7 +80,8 @@ summary,
 time,
 mark,
 audio,
-video {
+video,
+button {
   margin: 0;
   padding: 0;
   border: 0;
@@ -124,8 +125,13 @@ img {
 a {
   display: block;
   /* 將a預設inline改為block，才能設定間距及寬高*/
-  color: #000000;
   text-decoration: none;
+}
+
+/* 重製按鈕 */
+button {
+  border: none;
+  cursor: pointer;
 }
 
 /* 卷軸樣式 */
@@ -168,9 +174,16 @@ a {
 .searchbox {
   width: 100vw;
   height: calc(100vh - 100px);
+  min-height: 600px;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   gap: 20px;
+  background-image: url("../../assets/images/knowbg.svg");
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* 搜尋文章 */
 }
 .searchbox img {
   width: 50%;
@@ -180,6 +193,8 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 500px;
+  margin-top: 100px;
 }
 .searchbox .search-section .searchtexticon {
   position: relative;
@@ -229,8 +244,12 @@ a {
 }
 .searchbox .search-section .results .resultitem {
   padding: 8px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #3FAF73;
   cursor: pointer;
+  background-color: #FFF8D6;
+}
+.searchbox .search-section .results .resultitem:hover {
+  background-color: #fae083;
 }
 .searchbox .search-section .results .resultitem .link {
   display: flex;
@@ -239,9 +258,7 @@ a {
   font-family: "SweiGothicCJKtc-Regular", serif;
 }
 .searchbox .search-section .results .resultitem .link:hover {
-  color: #021D41;
-  text-decoration: underline #F9C0C0;
-  text-underline-offset: 4px; /* 調整底線與文字的距離 */
+  font-size: 18px;
 }
 .searchbox .search-section .results .resultitem .icon {
   margin-right: 8px;
@@ -282,4 +299,11 @@ a {
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 大於1440px */
+@media (min-width: 1441px) {
+  .searchbox {
+    background-position: bottom left 220px;
+  }
 }/*# sourceMappingURL=SearchBox.css.map */

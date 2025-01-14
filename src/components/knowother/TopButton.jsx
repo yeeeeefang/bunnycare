@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './TopButton.scss';
-// import '../css/TopButton.css';
+// import './TopButton.scss';
+import '../css/TopButton.css';
 
 
 const TopButton = ({ triggerHeight, stopOffset }) => {

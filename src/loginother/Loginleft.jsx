@@ -4,8 +4,8 @@ import ForgotPassword from './ForgotPassword';
 import { FaFacebookF, FaGoogle } from 'react-icons/fa';
 import { SiApple } from 'react-icons/si';
 
-import './Loginleft.scss';
-// import '../css/Loginleft.css'
+// import './Loginleft.scss';
+import '../css/Loginleft.css'
 
 
 export default function Loginleft() {

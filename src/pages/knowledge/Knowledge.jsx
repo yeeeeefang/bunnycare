@@ -4,8 +4,8 @@ import SearchBox from '../../components/knowother/SearchBox';
 // import ArticlePage from '../../components/knowother/ArticlePage';
 import Footer from '../../components/footer/Footer'
 import Navbars from '../../components/navbars/Navbars'
-import './Knowledge.scss';
-// import '../css/Knowledge.css'
+// import './Knowledge.scss';
+import '../css/Knowledge.css'
 const articles = [
   { id: 1, title: '超級蔬菜排行榜：哪些能增強兔兔免疫力？', category: '飲食' },
   { id: 2, title: '新手必讀：如何迎接兔兔的第一天？', category: '新手教學' },

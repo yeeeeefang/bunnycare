@@ -80,7 +80,8 @@ summary,
 time,
 mark,
 audio,
-video {
+video,
+button {
   margin: 0;
   padding: 0;
   border: 0;
@@ -124,8 +125,13 @@ img {
 a {
   display: block;
   /* 將a預設inline改為block，才能設定間距及寬高*/
-  color: #000000;
   text-decoration: none;
+}
+
+/* 重製按鈕 */
+button {
+  border: none;
+  cursor: pointer;
 }
 
 /* 卷軸樣式 */
@@ -165,16 +171,6 @@ a {
     background-color: $lesser-1;
 } */
 /* reset end */
-.titlehome {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 20px;
-}
-.titlehome .titlehomelogo {
-  width: 30%;
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -183,40 +179,31 @@ a {
   position: relative;
   bottom: 0;
   width: 100vw;
-  height: 75vh;
 }
 .wrapper .bakimg {
-  height: 600px;
+  height: calc(100vh - 140px);
+  width: 100vw;
   margin: auto;
   background-size: contain;
   background-position: bottom;
   background-repeat: no-repeat;
 }
-.wrapper .bakimg .hometext {
-  color: black;
-}
-.wrapper .homebox {
+.wrapper .bakimg .homebox {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 50px;
 }
-.wrapper .homebox .hometexth2 {
-  font-size: 2.5rem;
-}
-.wrapper .homebox .hometextp {
-  font-size: 1.8rem;
-}
-.wrapper .homebox .homearrow {
+.wrapper .bakimg .homebox .homearrow {
   position: absolute;
   top: 50%;
   width: 100vw;
   display: flex;
   justify-content: space-between;
+  color: #FFEEEE;
 }
-.wrapper .homebox .homearrow .arrowhome {
+.wrapper .bakimg .homebox .homearrow .arrowhome {
   cursor: pointer;
-  color: black;
   direction: 10px;
 }/*# sourceMappingURL=HomeCarousel.css.map */

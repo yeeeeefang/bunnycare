@@ -80,7 +80,8 @@ summary,
 time,
 mark,
 audio,
-video {
+video,
+button {
   margin: 0;
   padding: 0;
   border: 0;
@@ -124,8 +125,13 @@ img {
 a {
   display: block;
   /* 將a預設inline改為block，才能設定間距及寬高*/
-  color: #000000;
   text-decoration: none;
+}
+
+/* 重製按鈕 */
+button {
+  border: none;
+  cursor: pointer;
 }
 
 /* 卷軸樣式 */
@@ -166,207 +172,47 @@ a {
 } */
 /* reset end */
 .bunnynav {
-  background-image: url(../../assets/images/bunnycloud1.svg);
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 102px;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 30px;
-}
-.bunnynav .bunnylogobox {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 140px;
+  padding: 0 30px;
+  gap: 300px;
 }
 .bunnynav .bunnylogobox .bunnylogo {
-  width: 80px;
-  height: 70px;
-}
-.bunnynav .bunnylogobox .burger-menu {
-  display: none;
+  width: 325px;
+  height: auto;
 }
 .bunnynav .navul {
-  list-style: none;
   display: flex;
-  align-items: flex-end;
-  gap: 50px;
-  padding: 10px;
+  justify-content: space-around;
+  padding: 0;
+  width: 50%;
 }
-.bunnynav .bunnylink {
-  margin-right: 20px;
-  background-color: #FFFFFF;
-  width: 150px;
+.bunnynav .navul .bunnylink {
+  background-image: url("../../assets/images/navcloudlink.svg");
+  background-size: 130px 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 130px;
+  height: 90px;
   text-align: center;
-  border-radius: 99px;
-}
-.bunnynav .bunnylink a {
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1.25rem;
-}
-.bunnynav .bunnylink.active {
-  /* 針對當前頁面的按鈕做特殊樣式，比如： */
-  background-color: #DDF3FB;
-}
-.bunnynav .bunnylink.active a {
-  font-weight: 700;
-  color: #06377A;
+  line-height: 115px;
   font-size: 1.5rem;
+  font-weight: 700;
 }
-
-/* 大於1440px */
-@media (min-width: 1441px) {
-  .bunnynav {
-    width: 1920px;
-    height: 140px;
-    padding: 0 50px;
-  }
-  .bunnynav .bunnylogobox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .bunnynav .bunnylogobox .bunnylogo {
-    width: 100px;
-    height: 90px;
-  }
-  .bunnynav .navul {
-    gap: 60px;
-    padding: 25px;
-  }
-  .bunnynav .bunnylink {
-    width: 150px;
-    height: 40px;
-  }
-  .bunnynav .bunnylink a {
-    line-height: 40px;
-    font-size: 1.25rem;
-  }
-  .bunnynav .bunnylink.active a {
-    font-size: 1.5rem;
-  }
+.bunnynav .navul .bunnylink a {
+  color: #FFF;
+  text-shadow: 1px 1px 2px rgb(10, 8, 25);
 }
-/* 標準桌面1024-1440 */
-@media ((min-width:1024px) and (max-width:1439px)) {
-  .bunnynav {
-    max-width: 1439px;
-    height: 73px;
-    padding: 0 16px;
-  }
-  .bunnynav .bunnylogobox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .bunnynav .bunnylogobox .bunnylogo {
-    width: 70px;
-    height: 60px;
-  }
-  .bunnynav .navul {
-    gap: 30px;
-  }
-  .bunnynav .bunnylink {
-    width: 100px;
-    height: 30px;
-  }
-  .bunnynav .bunnylink a {
-    line-height: 30px;
-    font-size: 1rem;
-  }
-  .bunnynav .bunnylink.active a {
-    font-size: 1.25rem;
-  }
+.bunnynav .navul .bunnylink:hover {
+  translate: 3px 3px;
 }
-/*平板橫 */
-@media ( (max-width: 1023px) and (min-width: 768px)) {
-  .bunnynav {
-    background-size: 100% 73px;
-    max-width: 1023px;
-    height: 73px;
-  }
-  .bunnynav .bunnylogobox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .bunnynav .bunnylogobox .bunnylogo {
-    width: 60px;
-    height: 50px;
-  }
-  .bunnynav .navul {
-    height: 60px;
-    gap: 0px;
-    padding: 0;
-  }
-  .bunnynav .bunnylink {
-    width: 100px;
-    height: 20px;
-  }
-  .bunnynav .bunnylink a {
-    line-height: 20px;
-    font-size: 0.85rem;
-  }
-  .bunnynav .bunnylink.active a {
-    font-size: 1rem;
-  }
+.bunnynav .navul .bunnylink.active {
+  background-image: url("../../assets/images/active-navcloudlink.svg");
 }
-/* 新增：手機板樣式 */
-@media (max-width: 640px) {
-  .bunnynav .bunnylogobox {
-    display: flex;
-    justify-content: space-between;
-    width: 100vw;
-  }
-  .bunnynav .bunnylogobox .burger-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    z-index: 1001;
-  }
-  .bunnynav .bunnylogobox .burger-menu .burger-bar {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
-  .bunnynav .bunnylogobox .burger-menu.open .burger-bar:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  .bunnynav .bunnylogobox .burger-menu.open .burger-bar:nth-child(2) {
-    opacity: 0;
-  }
-  .bunnynav .bunnylogobox .burger-menu.open .burger-bar:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
-  .bunnynav .navul {
-    display: none;
-    position: absolute;
-    z-index: 999;
-    top: 70px;
-    right: 0;
-    width: 40%;
-    background-color: #fff;
-    flex-direction: column;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    /* 新增：開啟漢堡按鈕時顯示選單 */
-  }
-  .bunnynav .navul.open {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .bunnynav .navul .bunnylink {
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #e9afaf;
-  }
+.bunnynav .navul .bunnylink.active a {
+  color: #FFF;
+  text-shadow: 1px 1px 2px rgb(10, 8, 25);
 }/*# sourceMappingURL=Navbars.css.map */

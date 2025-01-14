@@ -1,8 +1,8 @@
 import React from 'react';
-import { SiApple } from 'react-icons/si';
-import { FaFacebookF, FaGoogle } from 'react-icons/fa';
-import './Footer.scss';
-// import '../css/Footer.css';
+// import { SiApple } from 'react-icons/si';
+// import { FaFacebookF, FaGoogle } from 'react-icons/fa';
+// import './Footer.scss';
+import '../css/Footer.css';
 
 export default function Footer() {
 
