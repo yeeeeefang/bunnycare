@@ -8,7 +8,7 @@
     cursor: pointer;
     width: 65px;
     height: auto;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: transform 0.3s ease;
    
     &:hover {
     transform: translate(-2px, -2px) scale(0.98);

@@ -12,6 +12,7 @@
     background-size: 980px 300px;
     background-repeat: no-repeat;
 
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -24,39 +25,110 @@
         margin-top: 20px;
         width: 650px;
         height: 145px;
+        animation: logo 1s ease-in-out infinite alternate;
+        transition: transform 0.3s ease;
+
+    }
+
+    @keyframes logo {
+        from {
+            transform: rotate(1);
+        }
+
+        to {
+            transform: scale(1.009);
+        }
+
     }
 
     .loginfly {
         position: absolute;
-        top:150px;
+        top: 150px;
         width: 470px;
         height: auto;
         rotate: 10deg;
+        animation: fly 2s ease-in-out infinite alternate;
+        transition: transform 0.3s ease;
+    }
+
+    @keyframes fly {
+        from {
+            transform: translate(0, 0);
+        }
+
+        to {
+            transform: translate(30px, -5px);
+        }
     }
 
     .cloudall {
-       
+
         width: 100vw;
         display: flex;
         justify-content: space-around;
-        .cloudcontent{
-             position: relative;
-            img{
-            width: 330px;
-            height: auto;
+
+        .cloudcontent {
+            position: relative;
+
+            img {
+                width: 330px;
+                height: auto;
+            }
+            transition: transform 0.3s ease;
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            &:active {
+                transform: translate(-2px, -2px) scale(0.98);
+                ;
+            }
+
+            h2 {
+                position: absolute;
+                font-size: $font-size-48;
+                font-weight: $font-bold;
+                top: 60px;
+                right: 110px;
+            }
         }
-        h2{
-            position: absolute;
-            font-size: $font-size-48;
-            font-weight: $font-bold;
-            top:60px;
-            right: 110px;
-        }
-        }
+
         .cloudcontent:nth-child(1) {
             margin-right: 350px;
         }
-        
+
     }
+
+}
+/* 大於1440px */
+@media ($mediaLg){
+    .login {  
+        background-image: url(../../assets/images/loginbg.svg);
+        background-position: bottom -150px left -120px;
+        background-size: 1180px 500px;
+        background-repeat: no-repeat;
     
+        .loginlogo {
+            margin-top: 40px;
+        }
+    
+        .loginfly {
+            position: absolute;
+            top: 250px;
+            width: 570px;
+            height: auto;
+            rotate: 10deg;
+            animation: fly 1.5s ease-in-out infinite alternate;
+            transition: transform 0.3s ease;
+        }
+    
+    
+        .cloudall {
+            margin-top: 50px;
+    
+            
+    
+        }
+    
+    }
 }
