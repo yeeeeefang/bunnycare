@@ -1,4 +1,5 @@
 import HomeCarousel from "../../components/homeother/HomeCarousel";
+import HomeThree from "../../components/homeother/HomeThree";
 import HomeTwo from "../../components/homeother/HomeTwo";
 import './Home.scss';
 // import '../css/Home.css';
@@ -10,6 +11,9 @@ function Home() {
     </div>
     <div>
       <HomeTwo/>
+    </div>
+    <div>
+      <HomeThree/>
     </div>
     </>
     );
