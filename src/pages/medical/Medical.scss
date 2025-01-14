@@ -1,0 +1,9 @@
+@use '../../assets/scss/reset';
+@use '../../assets/scss/variables/' as *;
+
+.show{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
