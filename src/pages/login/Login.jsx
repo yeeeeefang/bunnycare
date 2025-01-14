@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
 import './Login.scss';
 // import '../css/Login.css'
+
 export default function Login() {
     return (
         <>
             <div className="login">
                 <Link to='/home'><img className='loginlogo' src="./images/loginlogo.svg" alt="" /></Link>
 
-                <img className='loginfly' src="./images/loginfly.svg" alt="" />
+                <img className='loginfly' src="./images/loginfly.svg" alt="" 
+                />
 
                 <div className='cloudall'>
                     <Link to='/loginleft'><div className='cloudcontent'>

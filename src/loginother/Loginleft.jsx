@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ForgotPassword from './ForgotPassword';
+import { FaFacebookF, FaGoogle } from 'react-icons/fa';
+import { SiApple } from 'react-icons/si';
 
 import './Loginleft.scss';
 // import '../css/Loginleft.css'
@@ -60,16 +62,17 @@ export default function Loginleft() {
                 <hr />
               </div>
               <div className="social-login">
-                <button className="facebook"><img src="./images/icon_fb.svg" alt="" /></button>
-                <button className="apple"><img src="./images/icon_apple.svg" alt="" /></button>
-                <button className="google"><img src="./images/icon_google.svg" alt="" /></button>
+                <FaFacebookF className="icon facebook" />
+                <SiApple className="icon apple" />
+                <FaGoogle className="icon google" />
+
               </div>
             </div>
           </div>
         </div>
       </div>
-       {/* 彈窗 */}
-       <ForgotPassword isOpen={forgot} onClose={forgotClose} />
+      {/* 彈窗 */}
+      <ForgotPassword isOpen={forgot} onClose={forgotClose} />
     </>
   );
 }

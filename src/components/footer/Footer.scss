@@ -55,3 +55,30 @@
         }
     }
 }
+/* 大於1440px */
+@media ($mediaLg){
+    .footerall{
+        height: 270px;
+        width: 100vw;
+     
+        background-image: url('../../assets/images/footerimg.svg');
+          background-size: 1920px;
+          background-repeat: no-repeat;
+          background-position: center;
+        .logofooter{
+            margin-left: 220px;
+            margin-top: 30px;
+            width: 300px;
+        }
+        .footerright{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
+            margin-bottom: 50px;
+            margin-right: 90px;
+            
+        }
+    }
+}

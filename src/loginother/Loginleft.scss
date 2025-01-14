@@ -12,12 +12,14 @@
     background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
-.loginlogo{
-    position: absolute;
+
+    .loginlogo {
+        position: absolute;
         width: 30%;
         left: 80px;
         top: 80px;
-}
+    }
+
     .bunnyimg1 {
         position: absolute;
         width: 35%;
@@ -26,10 +28,6 @@
     }
 
     #login-page {
-        // display: flex;
-        //     flex-direction: column;
-        //     align-items: center;
-        //     justify-content: center;
         width: 40%;
         margin-left: 450px;
 
@@ -131,29 +129,60 @@
 
                 .social-login {
                     display: flex;
-                    justify-content: center;
+                    justify-content: space-around;
+                    width: 300px;
 
-                    button {
+                    .icon {
                         width: 40px;
                         height: 40px;
-                        border-radius: 50%;
-                        margin: 0 5px;
-                        background-color: #f1f1f1;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        transition: background-color 0.3s;
 
-                        img {
-                            width: 20px;
-                            height: 20px;
-                        }
+                    }
 
-                        &:hover {
-                            background-color: #e2e2e2;
-                        }
+                    .facebook {
+                        color: $fc-2;
+                    }
+
+                    .apple {
+                        color: #05182d;
+                    }
+
+                    .google {
+                        color: rgb(224, 51, 51);
                     }
                 }
+            }
+        }
+    }
+}
+
+/* 大於1440px */
+@media ($mediaLg) {
+    .loginleftall {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: $primary-1;
+        position: relative;
+        background-image: url('../assets/images/bunnybg1.svg');
+        background-position: bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+        .bunnyimg1 {
+            position: absolute;
+            width: 35%;
+            left: 200px;
+            bottom: 100px;
+        }
+       
+
+        #login-page {
+            width: 40%;
+            margin-left: 50px;
+
+            .login-main {
+
+                margin-left: 500px;
             }
         }
     }

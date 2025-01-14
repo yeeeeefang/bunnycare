@@ -80,8 +80,8 @@ export default function HomeCarousel() {
                 <div className="bakimg"
                     style={{
                         backgroundImage: `url(${slides[currentImgIndex].url})`,
-                        //     height: '100%',
-                        //     width: '100%',
+                            // height: '100%',
+                            // width: '100%',
                         //     backgroundSize: "cover",
                         //     margin: 'auto',
                     }}
