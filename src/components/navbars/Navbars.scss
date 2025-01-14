@@ -4,18 +4,14 @@
 .bunnynav {
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
+  justify-content: space-around;
   width: 100vw;
   height: 140px;
   padding: 0 30px;
   gap: 300px; //logo中間空間
 
   .bunnylogobox {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
+    
 
     .bunnylogo {
       width: 325px;
@@ -40,12 +36,14 @@
       line-height: 115px;
       font-size: $font-size-24;
       font-weight: $font-bold;
+      
+      a{
+        color: #FFF;
+        text-shadow: 1px 1px 2px rgb(10, 8, 25);
+      }
 
       &:hover {
         translate: 3px 3px;
-        a {
-          text-decoration: underline;
-        }
       }
 
       &.active {
@@ -53,6 +51,7 @@
 
         a {
           color: #FFF;
+          text-shadow: 1px 1px 2px rgb(10, 8, 25);
         }
       }
     }

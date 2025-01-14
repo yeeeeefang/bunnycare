@@ -16,21 +16,11 @@ export default function Navbars() {
 
   return (
     <nav className="bunnynav">
-      <ul className="navul">
-        {navLinks.slice(0, 2).map((link) => (
-          <li
-            key={link.path}
-            className={`bunnylink ${currentPath === link.path ? "active" : ""}`}
-          >
-            <Link to={link.path}>{link.name}</Link>
-          </li>
-        ))}
-      </ul>
       <div className="bunnylogobox">
         <img className="bunnylogo" src="./images/logonew.svg" alt="Bunny Care" />
       </div>
       <ul className="navul">
-        {navLinks.slice(2).map((link) => (
+        {navLinks.map((link) => (
           <li
             key={link.path}
             className={`bunnylink ${currentPath === link.path ? "active" : ""}`}
@@ -39,6 +29,7 @@ export default function Navbars() {
           </li>
         ))}
       </ul>
+
     </nav>
   );
 }
