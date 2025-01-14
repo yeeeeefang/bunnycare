@@ -10,13 +10,15 @@
     align-items: center;
     padding: 20px;
     gap: 40px;
+    position: relative;
 
     /* 共用h2 */
     h2 {
         font-size: $font-size-40;
         font-weight: $font-bold;
     }
-    h5{
+
+    h5 {
         font-size: $font-size-24;
         font-weight: $font-bold;
     }
@@ -123,12 +125,28 @@
     .artcontent {
         display: flex;
         flex-direction: column;
+        background-color: $bg-2;
+        padding: 30px;
+        border-radius: 5px;
+        position: relative;
+        gap: 20px;
+
+        .role3 {
+            position: absolute;
+            width: 335px;
+            height: 245px;
+            right: -50px;
+            top: -60px;
+        }
+
        
-        gap: 70px;
-        .artprt1{
+
+        .artprt1 {
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            margin: 30px 0;
+
             .artcontenth5 {
                 width: 250px;
                 height: 200px;
@@ -139,14 +157,17 @@
                 text-align: center;
                 padding-top: 80px;
             }
-            .meaning1{
+
+            .meaning1 {
                 display: flex;
                 flex-direction: column;
                 gap: 35px;
-                .meaning2{
+
+                .meaning2 {
                     display: flex;
                     gap: 35px;
-                    h5{
+
+                    h5 {
                         background-color: $btn-3;
                         border-radius: 50px;
                         width: 100px;
@@ -154,7 +175,8 @@
                         line-height: 50px;
                         text-align: center;
                     }
-                    p{
+
+                    p {
                         line-height: 50px;
                         font-size: $font-size-24;
                     }
@@ -162,29 +184,42 @@
             }
         }
     }
-    .arttextbox{
+
+    .arttextbox {
         display: flex;
         width: 100%;
         gap: 100px;
         align-items: center;
-       justify-content: center;
-        .imgbox{
+        justify-content: center;
+
+        .imgbox {
             display: flex;
             flex-direction: column;
-            img{
+
+            img {
                 width: 250px;
                 height: 200px;
             }
-            .imgtextbox{
+
+            .imgtextbox {
                 text-align: center;
             }
         }
     }
-    .arth4{
+
+    .arth4 {
         font-size: $font-size-24;
         font-weight: $font-bold;
         text-align: center;
-        letter-spacing: 8px;  /* 設定字母間距 */
+        letter-spacing: 8px;
+        /* 設定字母間距 */
         line-height: 50px;
+    }
+    .role4 {
+        position: absolute;
+        width: 205px;
+        height: 305px;
+        bottom: 50px;
+        left: 50px;
     }
 }

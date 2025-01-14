@@ -1,6 +1,6 @@
 import React from "react";
-// import './ArticlePage.scss';
-import '../css/ArticlePage.css';
+import './ArticlePage.scss';
+// import '../css/ArticlePage.css';
 import { VscDebugBreakpointFunction } from "react-icons/vsc";
 const ArticlePage = () => {
     // if (!article) {
@@ -72,7 +72,7 @@ const ArticlePage = () => {
                 <div className="artcontent">
 
                     <h2>異常便便的含意與應對</h2>
-
+                    <img className="role3" src="./images/role3.svg" alt="" />
 
                     {meaning.map((meaning, index) => (
                         <div key={index} className="artprt1">
@@ -116,6 +116,7 @@ const ArticlePage = () => {
                     每天清理便盆、注意飲食平衡，<br />
                     為兔兔打造健康快樂的生活環境。
                 </h4 >
+                <img className="role4" src="./images/role4.svg" alt="" />
             </div>
         </>
     );

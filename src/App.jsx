@@ -18,7 +18,7 @@ function App() {
 
   
   // 需要「隱藏 Navbar」的多個路徑清單
-  const hideNavOn = ["/", "/loginleft"];
+  const hideNavOn = ["/", "/loginleft",'/knowledge'];
 
   // 判斷目前路徑是否在清單中
   const hideNav = hideNavOn.includes(location.pathname);

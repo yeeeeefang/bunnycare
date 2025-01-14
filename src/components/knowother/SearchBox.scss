@@ -4,20 +4,28 @@
 .searchbox {
     width: 100vw;
     height: calc(100vh - 100px);
+    min-height: 600px;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     gap: 20px;
+    background-image: url('../../assets/images/knowbg.svg');
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
 
     img {
         width: 50%;
     }
-
+/* 搜尋文章 */
     .search-section {
         // position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        width: 500px;
+        margin-top: 100px;
 
         .searchtexticon {
             position: relative;
@@ -77,8 +85,12 @@
 
             .resultitem {
                 padding: 8px;
-                border-bottom: 1px solid #eee;
+                border-bottom: 1px solid $other-2;
                 cursor: pointer;
+                background-color:$bg-1 ;
+                &:hover{
+                    background-color: $other-9;
+                }
 
                 .link {
                     display: flex;
@@ -87,9 +99,7 @@
                     font-family: "SweiGothicCJKtc-Regular", serif;
         
                     &:hover {
-                        color: $fc-1;
-                        text-decoration: underline $other-7;
-                        text-underline-offset: 4px; /* 調整底線與文字的距離 */
+                      font-size: 18px;
                     }
                 }
         
