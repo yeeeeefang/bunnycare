@@ -382,17 +382,18 @@ button {
     font-size: 2.5rem;
     font-weight: 700;
     overflow: hidden;
+    height: 400px;
   }
   .medical-show .chart-view .chart svg {
-    translate: -1410px;
-    height: 255px;
+    translate: -1610px;
+    height: 305px;
     margin-bottom: 20px;
   }
   .medical-show .chart-view .chart svg .d {
     fill: #e73061;
     transform-origin: 50% 50%; /* 使用百分比表示中心 */
     /* 固定縮放的中心點 */
-    animation: heartbeat 1s ease-in-out infinite;
+    animation: heartbeat 1.5s ease-in-out infinite;
   }
   .medical-show .chart-view .chart svg .e {
     fill: #6fbc93;
@@ -400,6 +401,16 @@ button {
   }
   .medical-show .chart-view .chart p {
     color: #FFFFFF;
+  }
+  @keyframes heartbeat {
+    0%, 100% {
+      transform: translate(-100px, 0px) scale(1);
+      /* 回到原始位置和大小 */
+    }
+    50% {
+      transform: translate(-110px, 0px) scale(1.05);
+      /* 向上移動並縮放 */
+    }
   }
   .medical-show .chart-view,
   .medical-show .list-view {

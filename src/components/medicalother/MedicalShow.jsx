@@ -77,7 +77,7 @@ const MedicalShow = () => {
                     <div className="chart-view">
 
                         <div className="chart">
-                        <svg id="b" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2455.94 267.9">
+                        <svg  id="b" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2455.94 267.9">
   <g id="c" data-name="圖層 59">
     <g>
       <path className="d" d="M2027.53,97.03c22.73,41.32,15.47,90.51-13.12,107.32-27.69,16.25-67.99-5.61-92.88-46.13-27.21-38.15-27.53-80.8,2.2-97.93,30.68-17.66,78.57-2.33,103.8,36.74Z"/>
