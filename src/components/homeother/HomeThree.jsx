@@ -1,3 +1,4 @@
+import React from 'react';
 import { TiTick } from 'react-icons/ti';
 import './HomeThree.scss';
 // import '../css/HomeThree.css';

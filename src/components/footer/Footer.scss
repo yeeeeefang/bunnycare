@@ -1,0 +1,55 @@
+@use '../../assets/scss/reset';
+@use '../../assets/scss/variables/' as *;
+
+.footerall{
+    height: 200px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+
+    background-image: url('../../assets/images/footerimg.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    .logofooter{
+        margin-left: 150px;
+        margin-top: 30px;
+        width: 300px;
+    }
+    .footerright{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+        margin-bottom: 20px;
+        .social-login{
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            .facebook{
+                width: 24px;
+                height: 24px;
+                svg{
+                    width: 100%;
+                }
+            }
+            .apple{
+                width: 24px;
+                height: 24px;
+                svg{
+                    width: 100%;
+                }
+            }
+            .google{
+                width: 24px;
+                height: 24px;
+                svg{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
