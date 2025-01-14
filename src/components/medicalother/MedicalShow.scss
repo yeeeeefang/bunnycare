@@ -218,205 +218,205 @@
     }
 }
 /* 大於1440px */
-@media ($mediaLg){
-    .medical-show {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 1450px;
-        height: 835px;
-        background-color: $other-010;
-        border-radius: 30px;
-        overflow: hidden;
+// @media ($mediaLg){
+//     .medical-show {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+//         width: 1450px;
+//         height: 835px;
+//         background-color: $other-010;
+//         border-radius: 30px;
+//         overflow: hidden;
     
-        .chart-view {
-            background-image: url('../../assets/images/medicalbg1.png');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
+//         .chart-view {
+//             background-image: url('../../assets/images/medicalbg1.png');
+//             background-position: center;
+//             background-size: cover;
+//             background-repeat: no-repeat;
     
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: flex-end;
     
     
-            .chart {
-                position: relative;
-                margin-bottom: 20px;
-                text-align: center;
-                font-size: $font-size-40;
-                font-weight: $font-bold;
-                overflow: hidden;
-                height: 400px;
-                svg {
-                    // position: absolute;/
-                    translate: -1610px;
-                    height: 305px;
-                    margin-bottom: 20px;
+//             .chart {
+//                 position: relative;
+//                 margin-bottom: 20px;
+//                 text-align: center;
+//                 font-size: $font-size-40;
+//                 font-weight: $font-bold;
+//                 overflow: hidden;
+//                 height: 400px;
+//                 svg {
+//                     // position: absolute;/
+//                     translate: -1610px;
+//                     height: 305px;
+//                     margin-bottom: 20px;
                     
     
-                    .d {
-                        fill: #e73061;
-                        transform-origin: 50% 50%; /* 使用百分比表示中心 */
-                        /* 固定縮放的中心點 */
-                        animation: heartbeat 1.5s ease-in-out infinite;
-                    }
+//                     .d {
+//                         fill: #e73061;
+//                         transform-origin: 50% 50%; /* 使用百分比表示中心 */
+//                         /* 固定縮放的中心點 */
+//                         animation: heartbeat 1.5s ease-in-out infinite;
+//                     }
     
-                    .e {
-                        fill: #6fbc93;
-                        animation: line-move 2s linear infinite;
-                    }
-                }
+//                     .e {
+//                         fill: #6fbc93;
+//                         animation: line-move 2s linear infinite;
+//                     }
+//                 }
     
-                p {
-                    color: #FFFFFF;
-                }
-            }
-        }
-        // 愛心跳動動畫
-@keyframes heartbeat {
+//                 p {
+//                     color: #FFFFFF;
+//                 }
+//             }
+//         }
+//         // 愛心跳動動畫
+// @keyframes heartbeat {
 
-    0%,
-    100% {
-        transform: translate(-100px, 0px) scale(1);
-        /* 回到原始位置和大小 */
-    }
+//     0%,
+//     100% {
+//         transform: translate(-100px, 0px) scale(1);
+//         /* 回到原始位置和大小 */
+//     }
 
-    50% {
-        transform: translate(-110px, 0px) scale(1.05);
-        /* 向上移動並縮放 */
-    }
-}
+//     50% {
+//         transform: translate(-110px, 0px) scale(1.05);
+//         /* 向上移動並縮放 */
+//     }
+// }
     
-        /* 畫面內容 */
-        .chart-view,
-        .list-view {
-            width: 1125px;
-            height: 605px;
-            border-radius: 15px;
-            background-color: $other-011;
+//         /* 畫面內容 */
+//         .chart-view,
+//         .list-view {
+//             width: 1125px;
+//             height: 605px;
+//             border-radius: 15px;
+//             background-color: $other-011;
     
-            .hospital-list {
-                width: 98%;
-                max-height: 580px;
-                overflow-y: scroll;
-                list-style: none;
-                padding: 0;
-                margin: 0;
+//             .hospital-list {
+//                 width: 98%;
+//                 max-height: 580px;
+//                 overflow-y: scroll;
+//                 list-style: none;
+//                 padding: 0;
+//                 margin: 0;
     
-                &::-webkit-scrollbar {
-                    //捲動條
-                    width: 10px; //垂直卷軸寬
-                }
+//                 &::-webkit-scrollbar {
+//                     //捲動條
+//                     width: 10px; //垂直卷軸寬
+//                 }
     
-                &::-webkit-scrollbar-thumb {
-                    //卷軸手柄
-                    background-color: $other-012;
-                    width: 12px;
-                    border-radius: 99px;
-                }
+//                 &::-webkit-scrollbar-thumb {
+//                     //卷軸手柄
+//                     background-color: $other-012;
+//                     width: 12px;
+//                     border-radius: 99px;
+//                 }
     
-                &::-webkit-scrollbar-track {
-                    //滾動條軌道的顏色
-                    background-color: $bg-1;
-                    border-radius: 99px;
-                }
-    
-    
-                li {
-                    padding: 18px;
-                    border-bottom: 1px solid #eee;
-    
-                    .box {
-                        display: flex;
-                        justify-content: space-around;
-                        padding: 10px 30px;
-    
-                        .iconnamebox {
-                            flex: 1;
-                            display: flex;
-                            justify-content: flex-start;
-                            align-items: center;
-    
-                            img {
-                                width: 40px;
-                                height: 44px;
-                                margin-right: 20px;
-                            }
-    
-                            .hospital-name {
-                                font-size: $font-size-20;
-                                font-weight: $font-bold;
-                                color: #FFF;
-                                margin-right: 50px;
-                            }
-                        }
-    
-                        .info-box {
-                            display: flex;
-                            gap: 10px;
-                            width: 236px;
+//                 &::-webkit-scrollbar-track {
+//                     //滾動條軌道的顏色
+//                     background-color: $bg-1;
+//                     border-radius: 99px;
+//                 }
     
     
-                            .pink-box {
-                                background-color: $bg-2;
-                                padding: 8px 12px;
-                                border-radius: 30px;
-                                font-size: $font-size-20;
-                                font-weight: $font-bold;
-                                color: $fc-1;
-                                margin-right: 25px;
-                            }
+//                 li {
+//                     padding: 18px;
+//                     border-bottom: 1px solid #eee;
     
-                            .yellow-box {
-                                background-color: $other-010;
-                                padding: 4px 20px;
-                                border-radius: 30px;
-                                font-size: $font-size-20;
-                                color: $btn-4;
-                                font-weight: $font-bold;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+//                     .box {
+//                         display: flex;
+//                         justify-content: space-around;
+//                         padding: 10px 30px;
     
-        .buttons {
-            display: flex;
-            gap: 35px;
-            margin-top: 20px;
+//                         .iconnamebox {
+//                             flex: 1;
+//                             display: flex;
+//                             justify-content: flex-start;
+//                             align-items: center;
     
-            .region-button {
-                background-color: $bg-2;
-                padding: 10px 50px;
-                border-radius: 35px;
-                transition: background-color 0.3s;
-                font-size: $font-size-48;
-                font-weight: $font-bold;
+//                             img {
+//                                 width: 40px;
+//                                 height: 44px;
+//                                 margin-right: 20px;
+//                             }
     
-                &:hover {
-                    translate: 2px 2px;
+//                             .hospital-name {
+//                                 font-size: $font-size-20;
+//                                 font-weight: $font-bold;
+//                                 color: #FFF;
+//                                 margin-right: 50px;
+//                             }
+//                         }
     
-                }
+//                         .info-box {
+//                             display: flex;
+//                             gap: 10px;
+//                             width: 236px;
     
-                &.active {
-                    background-color: $bg-3;
-                }
-            }
     
-            .red-button {
-                width: 94px;
-                height: 94px;
-                cursor: pointer;
-                margin-left: 70px;
+//                             .pink-box {
+//                                 background-color: $bg-2;
+//                                 padding: 8px 12px;
+//                                 border-radius: 30px;
+//                                 font-size: $font-size-20;
+//                                 font-weight: $font-bold;
+//                                 color: $fc-1;
+//                                 margin-right: 25px;
+//                             }
     
-                &:hover {
-                    scale: 1.02;
+//                             .yellow-box {
+//                                 background-color: $other-010;
+//                                 padding: 4px 20px;
+//                                 border-radius: 30px;
+//                                 font-size: $font-size-20;
+//                                 color: $btn-4;
+//                                 font-weight: $font-bold;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
     
-                }
-            }
-        }
-    }
-}
+//         .buttons {
+//             display: flex;
+//             gap: 35px;
+//             margin-top: 20px;
+    
+//             .region-button {
+//                 background-color: $bg-2;
+//                 padding: 10px 50px;
+//                 border-radius: 35px;
+//                 transition: background-color 0.3s;
+//                 font-size: $font-size-48;
+//                 font-weight: $font-bold;
+    
+//                 &:hover {
+//                     translate: 2px 2px;
+    
+//                 }
+    
+//                 &.active {
+//                     background-color: $bg-3;
+//                 }
+//             }
+    
+//             .red-button {
+//                 width: 94px;
+//                 height: 94px;
+//                 cursor: pointer;
+//                 margin-left: 70px;
+    
+//                 &:hover {
+//                     scale: 1.02;
+    
+//                 }
+//             }
+//         }
+//     }
+// }
