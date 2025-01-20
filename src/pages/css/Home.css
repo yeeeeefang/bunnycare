@@ -170,4 +170,8 @@ button {
 ::-webkit-resizer{//多行文字欄位右下縮放按鈕
     background-color: $lesser-1;
 } */
-/* reset end *//*# sourceMappingURL=Home.css.map */
+/* reset end */
+.homenav {
+  position: absolute;
+  z-index: 1001;
+}/*# sourceMappingURL=Home.css.map */
