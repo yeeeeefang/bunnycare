@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-// import './Navbars.scss';
-import '../css/Navbars.css';
+import './Navbars.scss';
+// import '../css/Navbars.css';
 
 
 const navLinks = [

@@ -1,11 +1,12 @@
 import React from "react";
-// import './ArticlePage.scss';
-import '../css/ArticlePage.css';
+import './ArticlePage.scss';
+// import '../css/ArticlePage.css';
 import { VscDebugBreakpointFunction } from "react-icons/vsc";
+import { useLocation } from "react-router-dom";
+import TopButton from './TopButton';
 const ArticlePage = () => {
-    // if (!article) {
-    //     return <div>沒有選擇任何文章</div>;
-    // }
+    const location = useLocation();
+   
     const popo = [
         { title: "形狀", content: ["健康便便呈圓形或略微橢圓形，", "大小均勻，每顆直徑約為0.5-1厘米。"] },
         { title: "質地", content: ["便便應乾燥但不過於脆弱，", "內部可見纖維成分。"] },
@@ -118,6 +119,8 @@ const ArticlePage = () => {
                 </h4 >
                 <img className="role4" src="./images/role4.svg" alt="" />
             </div>
+             {/* 回頂部 */}
+             <TopButton triggerHeight={window.innerHeight} stopOffset={200} />
         </>
     );
 }

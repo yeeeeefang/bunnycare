@@ -3,7 +3,7 @@ import ArticlePage from './ArticlePage'; // 引入單一文章頁元件
 // import './SearchBox.scss';
 import '../css/SearchBox.css'
 import { FaSearch } from 'react-icons/fa';
-import TopButton from './TopButton';
+import {useNavigate} from 'react-router-dom';
 
 const ShowPages = 5; // 每頁顯示的文章數量
 
@@ -11,9 +11,7 @@ const SearchBox = ({ articles }) => {
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredArticles, setFilteredArticles] = useState(articles);
     const [currentPage, setCurrentPage] = useState(1);
-    const [selectedArticle, setSelectedArticle] = useState(null); // 新增：選中的文章
-    // 用於滾動到 ArticlePage 的引用
-    const articleRef = useRef(null);
+    const navigate = useNavigate();
 
 
     // 新增：分類對應的圖示與按鈕文字
@@ -60,13 +58,8 @@ const SearchBox = ({ articles }) => {
         }
     };
 
-    const handleArticleClick = (article) => {
-        setSelectedArticle(article); // 設置選中的文章
-        setTimeout(() => {
-            if (articleRef.current) {
-                articleRef.current.scrollIntoView({ behavior: 'smooth' }); // 滾動到 ArticlePage
-            }
-        }, 100);
+    const handleArticleClick = () => {
+        navigate('/articlepage')
     };
 
     return (
@@ -74,17 +67,17 @@ const SearchBox = ({ articles }) => {
             <div className="searchbox">
                 <img src="./images/articlepageimg4.svg" alt="" />
                 <div className="search-section">
-                   <div className='searchtexticon'>
-                   <input
-                        type="text"
-                        placeholder="輸入關鍵字搜尋文章..."
-                        value={searchTerm}
-                        onChange={handleSearch}
-                        className="textinput"
-                    />
-                    <span className="search-icon"><FaSearch  /></span>
-                   </div>
-                    
+                    <div className='searchtexticon'>
+                        <input
+                            type="text"
+                            placeholder="輸入關鍵字搜尋文章..."
+                            value={searchTerm}
+                            onChange={handleSearch}
+                            className="textinput"
+                        />
+                        <span className="search-icon"><FaSearch /></span>
+                    </div>
+
                     <div className="categories">
                         <p>分類:</p>
                         {Object.keys(categoryTexts).map((category) => (
@@ -140,19 +133,11 @@ const SearchBox = ({ articles }) => {
 
 
             </div>
-            {/* 新增：動態顯示文章區塊 */}
-            {
-                selectedArticle && (
-                    <div ref={articleRef} className="article-section">
-                        <ArticlePage article={selectedArticle} />
-                    </div>
-                )
-            }
-            {/* 回頂部 */}
-            <TopButton triggerHeight={window.innerHeight} stopOffset={200}/>
+           
         </>
     );
 };
+
 
 export default SearchBox;
 
