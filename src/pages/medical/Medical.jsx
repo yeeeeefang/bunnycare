@@ -7,7 +7,6 @@ function Medical() {
   return (
     <>
       <div className='medicalall'>
-        <Navbars/>
         <div className='show'>
           <img className='role1' src="./images/role1.svg" alt="" />
           <img className='role2' src="./images/role2.svg" alt="" />

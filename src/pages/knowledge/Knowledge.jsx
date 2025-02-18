@@ -43,7 +43,7 @@ function Knowledge() {
   return (
     <>
       <div className='knowledgeall'>
-        <Navbars/>
+        {/* <Navbars/> */}
         <SearchBox articles={articles} />
       
         <Footer/>

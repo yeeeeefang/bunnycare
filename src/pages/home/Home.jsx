@@ -9,7 +9,7 @@ function Home() {
     return (
     <>
     <div className="homenav">
-      <Navbars/>
+      {/* <Navbars/> */}
     </div>
     <div className="home1">
     <HomeCarousel/>
